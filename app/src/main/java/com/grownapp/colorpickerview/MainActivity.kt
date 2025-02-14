@@ -2,6 +2,7 @@ package com.grownapp.colorpickerview
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.colorPickerView.hueSliderView = binding.hueSlider
-
+        binding.colorPickerView.setInitialColor(Color.YELLOW)
 
         binding.button.setOnClickListener {
             binding.root.setBackgroundColor(binding.colorPickerView.color)

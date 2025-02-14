@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#333333"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,6 +23,7 @@
         android:layout_height="@dimen/_170sdp"
         android:layout_marginHorizontal="@dimen/_14sdp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:sliderStrokeSize="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,18 +31,18 @@
     <com.grownapp.colorpickerview.KavehHueSlider
         android:id="@+id/hueSlider"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_height="@dimen/_18sdp"
         android:layout_marginHorizontal="@dimen/_16sdp"
         app:layout_constraintEnd_toEndOf="@+id/colorPickerView"
         app:layout_constraintStart_toStartOf="@+id/colorPickerView"
         app:layout_constraintTop_toBottomOf="@+id/colorPickerView"
-        app:sliderStrokeSize="4dp" />
+        app:sliderStrokeSize="@dimen/_3sdp" />
 
     <Button
-        android:layout_marginTop="@dimen/_16sdp"
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/colorPickerView"
         app:layout_constraintStart_toStartOf="@+id/colorPickerView"

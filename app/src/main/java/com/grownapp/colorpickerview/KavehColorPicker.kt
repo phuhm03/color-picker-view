@@ -297,4 +297,15 @@ class KavehColorPicker(context: Context, attributeSet: AttributeSet?) :
         private const val HUE_KEY = "hue"
         private const val ALPHA_KEY = "alpha"
     }
+
+    fun setInitialColor(color: Int) {
+        Color.colorToHSV(color, hsvArray)
+        hue = hsvArray[0].toInt()
+        alphaValue = Color.alpha(color)
+
+        colorWithFullAlpha = Color.HSVToColor(hsvArray)
+        invalidate()
+        callListeners()
+    }
+
 }
